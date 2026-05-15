@@ -1,0 +1,2 @@
+sdk.dir=C:/Users/harvy/OneDrive/Documents/Android
+flutter.sdk=C:/Users/harvy/OneDrive/Desktop/flutter

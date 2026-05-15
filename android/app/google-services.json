@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "245005786812",
+    "project_id": "pysch-project",
+    "storage_bucket": "pysch-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245005786812:android:a71828b20e85b4e9c9bab9",
+        "android_client_info": {
+          "package_name": "com.example.psych_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245005786812-133n88qe4v3rne4mmpqguq4hlogqtk2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJm353pFLXOj_803xiSZKgwKUWbgQyvMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245005786812-133n88qe4v3rne4mmpqguq4hlogqtk2o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "245005786812-gjfiteqpnbajf0bl12n2q75jpgkkh6ao.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.psychProject"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
