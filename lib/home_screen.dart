@@ -10,23 +10,23 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // --- Controllers for Patient Data ---
+ 
   final TextEditingController _clientNameController = TextEditingController();
   final TextEditingController _testsController = TextEditingController();
   final TextEditingController _diagnosisController = TextEditingController();
   final TextEditingController _prescriptionController = TextEditingController();
   final TextEditingController _referralsController = TextEditingController();
 
-  // --- State for Selection ---
+  
   DateTime? _selectedAppointmentDate;
   TimeOfDay? _selectedAppointmentTime;
   DateTime? _selectedOnsetDate;
 
-  // --- Theme Colors ---
+  
   final Color _primaryBurgundy = const Color(0xFF672E3A);
   final Color _lightCream = const Color(0xFFE8DDDA);
 
-  // Getter to ensure we always have the latest User ID
+  
   String? get _uid => FirebaseAuth.instance.currentUser?.uid;
 
   @override
@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // --- Firebase Logic ---
+  
   Future<void> _saveRecordToFirebase() async {
     if (_uid == null) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
     String formattedOnsetDate = _selectedOnsetDate!.toLocal().toString().split(' ')[0];
 
     try {
-      // Saving to the 'patient_visits' collection
+      
       await FirebaseFirestore.instance.collection('patient_visits').add({
         'clientName': _clientNameController.text,
         'appointment': formattedAppt,

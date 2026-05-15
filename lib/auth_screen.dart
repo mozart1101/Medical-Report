@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart'; // Import the new home page
+import 'home_screen.dart'; 
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -26,7 +26,7 @@ class _AuthScreenState extends State<AuthScreen> {
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // Navigate to the full Homepage
+                
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
               },
               style: ElevatedButton.styleFrom(

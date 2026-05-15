@@ -16,7 +16,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   _navigateToNext() async {
-    // Simulate a loading delay
+    
     await Future.delayed(const Duration(seconds: 3));
     if (!mounted) return;
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const OnboardingScreen()));

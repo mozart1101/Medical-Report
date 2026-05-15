@@ -10,7 +10,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  // Controller to keep track of which page we're on
+  
   final PageController _controller = PageController();
   bool onLastPage = false;
 
@@ -21,12 +21,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // THE SLIDING PAGES
+          
           PageView(
             controller: _controller,
             onPageChanged: (index) {
               setState(() {
-                onLastPage = (index == 2); // 2 is the index of the 3rd page
+                onLastPage = (index == 2); 
               });
             },
             children: [
@@ -51,19 +51,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ],
           ),
 
-          // BOTTOM UI (Indicator and Buttons)
+          
           Container(
             alignment: const Alignment(0, 0.85),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                // Skip Button
+                
                 GestureDetector(
                   onTap: () => _controller.jumpToPage(2),
                   child: const Text("Skip", style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
 
-                // Dot Indicator
+                
                 SmoothPageIndicator(
                   controller: _controller,
                   count: 3,
@@ -74,7 +74,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
 
-                // Next or Done Button
+                
                 onLastPage
                     ? GestureDetector(
                         onTap: () {
@@ -100,7 +100,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  // Helper widget to build the individual pages
+  
   Widget _buildPage({required Color color, required IconData icon, required String title, required String subtitle}) {
     return Container(
       color: color,

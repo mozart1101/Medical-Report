@@ -17,13 +17,13 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Future<void> _login() async {
     try {
-      // THE GATEKEEPER: Talks to Firebase to verify credentials
+      
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
       );
 
-      // If successful, move to Homepage
+      
       if (mounted) {
         Navigator.pushReplacement(
           context,
@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
         );
       }
     } on FirebaseAuthException catch (e) {
-      // If random/wrong info is entered, show this error
+     
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Login Failed: ${e.message}"), backgroundColor: Colors.red),
       );
